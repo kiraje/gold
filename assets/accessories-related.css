@@ -1,0 +1,197 @@
+#accessoriesModal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto !important;
+    z-index: 200;
+
+    & .modal-content {
+        min-width: 600px;
+        margin-left: unset !important;
+        max-width: 900px;
+        width: auto !important;
+
+        & .icon-close {
+            margin-top: 6px;
+        }
+    }
+
+    & .popup-close {
+        display: block !important;
+        z-index: 200;
+    }
+
+    & .modal-header {
+        padding: 2rem 1.625rem 0 1.625rem;
+        background: #fff;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        text-align: left;
+        font-weight: 600;
+        transform: translateY(1px);
+    }
+
+    & .modal-body {
+        padding: 1.625rem;
+        padding-bottom: 2rem;
+        margin-top: -0.5px;
+    }
+
+    & .product-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 370px;
+        gap: 1.625rem;
+    }
+
+    & .product-grid .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        width: 200px;
+    }
+
+    & .product-title {
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        display: block;
+        margin: 10px 0 35px 0;
+        max-height: 35px;
+        display: -webkit-box;
+        max-width: 200px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    & .product-image img {
+        width: auto;
+        height: 45%;
+    }
+
+    & .price-block {
+        font-size: 15px;
+        display: inline-block;
+    }
+
+    & .accessory-in-stock {
+        font-size: 15px;
+        display: inline-block;
+        margin: 14px 0;
+    }
+    & .accessory-in-stock .fa-check-circle:before {
+        color: #439439;
+    }
+
+    & .accessory-add {
+        position: relative;
+
+        & form {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            height: 40px;
+            position: absolute;
+        }
+
+        & .qty {
+            width: 50px;
+            height: 40px;
+            border: 1px solid #cdcdcd;
+            border-radius: 4px;
+            text-align: center;
+            margin-right: 2px;
+            padding: 10px 0;
+            padding-top: 10px;
+            padding-top: 10px !important;
+            position: relative;
+            float: left;
+        }
+
+        & .add-btn {
+            width: 72%;
+            border-radius: 4px;
+            text-align: center;
+            background: #f3c974;
+            font-family: Open Sans, sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            border: solid thin #9b9b9b;
+        }
+
+        & .add-btn span {
+            font-size: 16px;
+            color: #7a4e00;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+.add-accessories {
+    cursor: pointer;
+    margin: 20px 0 0 0;
+    padding: 5px 0;
+    display: flex;
+    color: #006699;
+}
+
+#addAccessoriesBtn {
+    color: #125ea7;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addAccessoriesBtn .fa-gift {
+    margin: 0 6px 0 4px;
+}
+
+@media only screen and (max-width: 762px) {
+    #accessoriesModal {
+        & .modal-content {
+            width: 100vw;
+            margin: auto !important;
+        }
+
+        & .product-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.product-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-giftpack {
+    background: url("./assets/wp-content/themes/JMBullion/images/icons/icon-giftpack.svg")
+        no-repeat;
+    width: 30px;
+    height: 16px;
+    display: inline-flex;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
